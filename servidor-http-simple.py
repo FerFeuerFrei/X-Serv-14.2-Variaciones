@@ -16,7 +16,7 @@ import socket
 # let's use one above 1024
 
 mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-mySocket.bind(('localhost', 1234))
+mySocket.bind(('localhost', 1237))
 
 # Queue a maximum of 5 TCP connection requests
 
@@ -33,7 +33,7 @@ while True:
     recvSocket.send(bytes("HTTP/1.1 200 OK\r\n\r\n" +
                     "<html><body><h1>Hello World!</h1></body></html>" +
                     "<img src = 'https://i.ytimg.com/vi/n0ps41kX_R0/hqdefault.jpg'>" +
-                    "<a href = 'http://gysc.es'>gsyc.es</a>" +
+                    "<p><a href = 'http://gsyc.es'>gsyc.es</a>" +
                     "\r\n", 'utf-8'))
     recvSocket.close()
 
