@@ -32,6 +32,8 @@ while True:
     print(recvSocket.recv(1024))
     recvSocket.send(bytes("HTTP/1.1 200 OK\r\n\r\n" +
                     "<html><body><h1>Hello World!</h1></body></html>" +
+                    "<img src = 'https://i.ytimg.com/vi/n0ps41kX_R0/hqdefault.jpg'>" +
+                    "<a href = 'http://gysc.es'>gsyc.es</a>" +
                     "\r\n", 'utf-8'))
     recvSocket.close()
 
